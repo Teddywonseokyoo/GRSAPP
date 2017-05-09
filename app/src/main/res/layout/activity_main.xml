@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:opencv="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.exp.grs.grsphone.MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/grsmain">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/GrsCameraPreview">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+                    <com.exp.grs.grsphone.GrsCameraView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/activity_surface_view"  />
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"
+                        android:id="@+id/GrsCameraTool">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="100">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="97"
+                                android:id="@+id/grsresultview">
+
+                                <LinearLayout
+                                    android:id="@+id/activity_working_view"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#00000000">
+
+                                    <FrameLayout
+                                        android:id="@+id/activity_result_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+                                        <LinearLayout
+                                            android:orientation="horizontal"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+                                            <ImageView
+                                                android:layout_width="211dp"
+                                                android:layout_height="match_parent"
+                                                android:id="@+id/imageView" />
+
+                                            <LinearLayout
+                                                android:orientation="vertical"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent">
+
+                                                <TextView
+                                                    android:text="gauge_id"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/scanText" />
+
+                                                <TextView
+                                                    android:text="gauge_value"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/valueText"
+                                                    android:layout_weight="1" />
+                                            </LinearLayout>
+                                        </LinearLayout>
+                                    </FrameLayout>
+                                </LinearLayout>
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:weightSum="13">
+                                <FrameLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="4dp"
+                                    android:layout_weight="1"/>
+
+                                <ImageButton
+                                    android:layout_width="50dp"
+                                    android:background="#00000000"
+                                    android:id="@+id/back_btn"
+                                    android:src="@drawable/grsbackbtn_xhdpi"
+                                    android:scaleType="fitCenter"
+                                    android:layout_height="50dp" />
+
+                                <FrameLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="4dp"
+                                    android:layout_weight="1"/>
+                                <ImageButton
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:background="#00000000"
+                                    android:id="@+id/retake_btn"
+                                    android:src="@drawable/grsretakebtn_xhdpi"
+                                    android:scaleType="fitCenter"
+                                    android:layout_weight="0.71" />
+                                <FrameLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="4dp"
+                                    android:layout_weight="1"/>
+                                <FrameLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_weight="2"/>
+                                <FrameLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="4dp"
+                                    android:layout_weight="1"/>
+                                <FrameLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_weight="2"/>
+                                <FrameLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="4dp"
+                                    android:layout_weight="1"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/grslogin">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/grssplash_xhdpi"
+        android:id="@+id/grssplash">
+    </FrameLayout>
+
+</RelativeLayout>
